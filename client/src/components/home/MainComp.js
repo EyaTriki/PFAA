@@ -7,7 +7,7 @@ import { products } from './productdata';
 function MainComp() {
     return (
         <>
-        {/*<div className="home_section">
+      <div className="home_section">
             <div className="banner_part">
                 <Banner />
             </div>
@@ -30,7 +30,7 @@ function MainComp() {
 
             <Slide title="Best Seller" products={products} />
             <Slide title="Upto 80% off" products={products} />
-    </div>*/}
+    </div>
 
     <br/>  
 
