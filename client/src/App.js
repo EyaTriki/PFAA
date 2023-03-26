@@ -8,6 +8,11 @@ import SignUp from './components/signin_signup/SignUp';
 import Cart from './components/cart/Cart';
 import {Routes,Route} from 'react-router-dom';
 import Buynow from './components/buynow/Buynow';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
 function App() {
   return (

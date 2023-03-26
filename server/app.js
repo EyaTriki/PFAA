@@ -21,7 +21,7 @@ app.use("/api/products",productRoute);
 app.use("/api/carts",cartRoute);
 app.use("/api/orders",orderRoute);
 app.use("/api/checkout",stripeRoute);
-app.use(cors());
+app.use(cors({origin:'http://localhost:3000/'}));
 
 
 const port=8005;
