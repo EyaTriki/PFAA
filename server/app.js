@@ -15,14 +15,15 @@ const stripeRoute = require("./routes/stripe")
 const cors =require("cors");
 
 app.use(express.json());
+app.use(cors());
 app.use("/api/auth",authRoute);
 app.use("/api/users",userRoute);
 app.use("/api/products",productRoute);
 app.use("/api/carts",cartRoute);
 app.use("/api/orders",orderRoute);
 app.use("/api/checkout",stripeRoute);
-app.use(cors({origin:'http://localhost:3000/'}));
 
+//app.use(cors({origin: 'http://localhost:3000'}));
 
 const port=8005;
 app.listen(port,()=>{
