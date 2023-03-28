@@ -67,8 +67,13 @@ const MenuItem = styled.div`
   margin-left: 25px;
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
+
+
 const Navbar = () => {
   
+  const quantity =useSelector(state=>state.cart.quantity)
+  console.log(quantity)
+
   return (
     <Container>
       <Wrapper>
@@ -85,13 +90,13 @@ const Navbar = () => {
         <Right>
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
-        
+        <Link to="/cart">
           <MenuItem>
-            <Badge b color="primary">
+            <Badge badgeContent={quantity} color="primary">
               <ShoppingCartOutlined />
             </Badge>
           </MenuItem>
-       
+          </Link>
         </Right>
       </Wrapper>
     </Container>

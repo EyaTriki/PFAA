@@ -9,6 +9,8 @@ import { mobile } from "../Responsive";
 import { useLocation } from 'react-router-dom';
 import { publicRequest } from '../requestMethods';
 import { useState , useEffect } from "react";
+import { useDispatch } from 'react-redux';
+import { addProduct } from '../redux/cartRedux';
 
 
 
@@ -126,7 +128,7 @@ const Product = () => {
   const [quantity , setQuantity]=useState(1);
   const [color , setColor]=useState("");
   const [size , setSize]=useState("");
-
+  const dispatch =useDispatch();
 
 
  useEffect(() => {
@@ -149,6 +151,11 @@ if(type == "dec"){
 }
  }
 
+ const handelClick =()=>{
+ dispatch(
+  addProduct({...product,quantity, color ,size}));
+ }
+ 
   return (
    <Container>
     <Navbar/>
@@ -183,7 +190,7 @@ if(type == "dec"){
                     <Amount>{quantity}</Amount>
                     <Add onClick={()=>handelQuantity("inc")}/>
                 </AmountContainer>
-                <Button>Add to cart</Button>
+                <Button onClick={handelClick}>Add to cart</Button>
             </AddContainer>
         </InfoContainer>
     </Wrapper>
