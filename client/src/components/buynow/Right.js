@@ -4,7 +4,7 @@ import StripeCheckout from 'react-stripe-checkout';
 import abc from "../header/amazon.png";
 import axios from 'axios';
 
-const KEY="pk_test_51MBFA0DXs7irTYXOI19xwUzrRDiAv2vNKzAdhJVz7UGm6Smwe9FPjlbILgOnhpPK519mo9bkLq7QOFIuaGnGMoWy003b5i5D5h"
+//const KEY="pk_test_51MBFA0DXs7irTYXOI19xwUzrRDiAv2vNKzAdhJVz7UGm6Smwe9FPjlbILgOnhpPK519mo9bkLq7QOFIuaGnGMoWy003b5i5D5h"
 const Right = () => {
     const [stripeToken , setStripeToken] = useState(null)
     const onToken=(token)=>{
